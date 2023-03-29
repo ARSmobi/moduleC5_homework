@@ -35,7 +35,7 @@ for (let i = 0; i < listNode.children.length; i++){
         name: `${firstNode.textContent} ${secondNode.textContent}`,
         age: Number(ageNode.textContent),
         prof: profNode.textContent,
-        lang: langAttr.textContent
+        lang: langAttr
     })
 }
 
