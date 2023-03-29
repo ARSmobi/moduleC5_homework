@@ -1,0 +1,58 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px
+}
+
+p {
+    margin: 10px;
+    color: white;
+    font-size: 22px
+}
+
+.input {
+    height: 60px;
+    background-color: #864;
+    color: white;
+    border: 0;
+    border-radius: 100px 0
+}
+
+input {
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 22px;
+    transition: 1s
+}
+
+input:focus {
+    transform: scale(1.2)
+}
+
+.btn {
+    width: 300px;
+    height: 35px;
+    background-color: lightblue;
+    border: solid 5px olive;
+    transition: 0.5s;
+    border-radius: 35px 0
+}
+
+.btn:hover {
+    transform: scale(1.1)
+}
+
+#content {
+    background-color: #542;
+    border: 0;
+    border-radius: 0 100px;
+    min-height: 100px
+}
+
+img {
+    border: 0;
+    border-radius: 0 25px
+}
