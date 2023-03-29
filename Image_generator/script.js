@@ -14,8 +14,8 @@ function useRequest(width, height) {
 btn.addEventListener('click', async () => {
     const inputWidth = document.querySelector('#width').value;
     const inputHeight = document.querySelector('#height').value;
-    let minSize = 200,
-        maxSize = 400;
+    let minSize = 100,
+        maxSize = 300;
     if ((inputWidth >= minSize && inputWidth <= maxSize) && (inputHeight >= minSize && inputHeight <= maxSize)){
         const url = await useRequest(inputWidth, inputHeight)
         contentNode.innerHTML = `
