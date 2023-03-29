@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: space-between
+}
+
+.head {
+    width: 350px;
+    height: 200px;
+    background-color: orange;
+    border-radius: 0 0 100% 0;
+    padding-left: 20px
+}
+
+.student {
+    width: 400px;
+    height: 100px;
+    background-color: lightblue;
+    border-radius: 0 0 0 100%;
+    text-align: end;
+    padding-right: 20px
+}
+
+.name {
+    font-weight: bold;
+    font-size: 150%
+}
