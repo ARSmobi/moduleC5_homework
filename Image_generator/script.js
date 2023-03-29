@@ -9,7 +9,7 @@ function useRequest(width, height) {
             console.log('error')
             contentNode.innerHTML = '<p>Что-то пошло не так</p>'
         })
-};
+}
 
 btn.addEventListener('click', async () => {
     const inputWidth = document.querySelector('#width').value;
