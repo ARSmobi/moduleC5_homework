@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Задание 5</title>
 </head>
 <body>
-$END$
+
+<div class='input'>
+    <div class="fields">
+        <div>
+            <label for="page">Номер страницы</label>
+            <input id='page' type="text">
+        </div>
+        <div>
+            <label for="limit">Лимит</label>
+            <input id='limit' type="text">
+        </div>
+    </div>
+    <button class='btn'>Запрос</button>
+</div>
+
+<div id='content'>
+    <p>Здесь будет результат запроса</p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

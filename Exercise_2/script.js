@@ -15,10 +15,21 @@ const jsonString = `
 }
 `;
 
-const parsedJson = JSON.parse(jsonString);
+const res = JSON.parse(jsonString);
 
-for (let i = 0; i < parsedJson.list.length; i++){
-    parsedJson.list[i].age = Number(parsedJson.list[i].age)
+let view = '';
+
+for (let i = 0; i < res.list.length; i++){
+    view = view + `
+    {name: '${res.list[i].name}', age: ${Number(res.list[i].age)}, prof: '${res.list[i].prof}'}`
+    if (i + 1 < res.list.length){
+        view += ','
+    }
 }
 
-console.log(parsedJson)
+view = `{
+  list: [${view}
+  ]
+}`;
+
+console.log(view);

@@ -21,7 +21,7 @@ const xml = `
 const parser = new DOMParser();
 const xmlDOM = parser.parseFromString(xml, 'text/xml');
 const listNode = xmlDOM.querySelector('list');
-let DOMObjects = {list: []};
+let JSObject = {list: []};
 
 for (let i = 0; i < listNode.children.length; i++){
     const studentNode = listNode.children[i]
@@ -31,7 +31,7 @@ for (let i = 0; i < listNode.children.length; i++){
     const secondNode = nameNode.querySelector('second')
     const ageNode = studentNode.querySelector('age')
     const profNode = studentNode.querySelector('prof')
-    DOMObjects.list.push({
+    JSObject.list.push({
         name: `${firstNode.textContent} ${secondNode.textContent}`,
         age: Number(ageNode.textContent),
         prof: profNode.textContent,
@@ -39,4 +39,22 @@ for (let i = 0; i < listNode.children.length; i++){
     })
 }
 
-console.log(DOMObjects)
+let view = '';
+
+for (let i = 0; i < JSObject.list.length; i++){
+    view = view + `
+    {name: '${JSObject.list[i].name}', \
+age: ${JSObject.list[i].age}, \
+prof: '${JSObject.list[i].prof}', \
+lang: '${JSObject.list[i].lang}'}`
+    if (i + 1 < JSObject.list.length){
+        view += ','
+    }
+}
+
+view = `{
+  list: [${view}
+  ]
+}`;
+
+console.log(view);
